@@ -1,0 +1,27 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+div.Menu{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+ul.botones-menu{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ul.botones-menu li a{
+  color: white;
+}
+img.logo{
+  width: 8vw;
+}
