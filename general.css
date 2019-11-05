@@ -1,4 +1,94 @@
+/*aca empiexa los generales*/
+
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+h1{
+  color: white;
+}
+
+/*aca terminan los genreales*/
+
+
+/*Aca empieza el Header*/
 header{
   background-color:rgb(143, 28, 28);
-  
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  height: 4vw;
 }
+div.Menu{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 100%;
+}
+ul.botones-menu{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  justify-content: space-around;
+}
+ul.botones-menu li{
+  width: 20%;
+  background-color: white;
+  height: 100%
+}
+ul.botones-menu li a{
+  color: black;
+  width: 100%;
+  height: 100%
+}
+div.img-logo{
+  width: 10%;
+  height: 100%;
+  justify-content: space-around;
+}
+img.logo{
+  height: 100%;
+}
+div.buscador{
+  width:30%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+}
+form.barra-buscadora{
+  width: 50%;
+  height: 26%;
+  position: absolute;
+  left: 25%;
+  right:25%;
+  top: 37%;
+  bottom: 37%;
+
+}
+form.barra-buscadora input{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+/*Aca termina el Header*/
+
+/*Aca empieza el Main general*/
+main{
+  background-color: rgb(43, 43, 43);
+}
+/*Aca termina el Main genera*/
