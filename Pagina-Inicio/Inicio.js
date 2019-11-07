@@ -12,6 +12,6 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
       }
       */
      for(var i = 0; i < resultadoFinal.results.length; i++) {
-         listado.innerHTML += "<li class='unaClase' id='" + resultadoFinal.results[i].id + "'>" + resultadoFinal.results[i].original_name + "</li>"
+         listado.innerHTML += "<li class='unaClase'>" + resultadoFinal.results[i].original_name + "</li>"
      }
   })
