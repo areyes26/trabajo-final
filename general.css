@@ -12,6 +12,7 @@ li{
 }
 h1{
   color: white;
+  margin: 0;
 }
 
 /*aca terminan los genreales*/
@@ -22,7 +23,7 @@ header{
   background-color:rgb(143, 28, 28);
   display: flex;
   flex-wrap: wrap;
-  position: fixed;
+/*position: fixed;*/
   width: 100%;
   height: 4vw;
 }
@@ -88,7 +89,7 @@ form.barra-buscadora input{
 /*Aca termina el Header*/
 
 /*Aca empieza el Main general*/
-main{
+body{
   background-color: rgb(43, 43, 43);
 }
 /*Aca termina el Main genera*/
