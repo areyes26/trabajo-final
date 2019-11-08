@@ -1,3 +1,27 @@
 div.imagenSerie img{
 width: 29vw;
+width: 50%;
+
+}
+
+div.infoSerie {
+  
+}
+
+
+div.divGrande {
+  display: flex;
+  width: 50%;
+
+}
+
+main {
+  background-color: red;
+}
+
+body {
+  background-color: black;
+  font-family: sans-serif;
+  color: grey;
+  width: 100%;
 }
