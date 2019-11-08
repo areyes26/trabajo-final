@@ -48,7 +48,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
           return response.json();
       })
       .then(function(resultadoFinalAire) {
-          var listadoAire = document.querySelector("#listaMejor");
+          var listadoAire = document.querySelector("#listaMejor ");
           //console.log(resultadoFinal.results);
 
           /*
