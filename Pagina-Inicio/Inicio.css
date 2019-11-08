@@ -8,3 +8,7 @@ div.Populares{
   background-color: rgba(238, 79, 79, 0.63);
   margin: 0;
 }
+li.uk-active a{
+  width: 1vw;
+height: 1vw;
+}
