@@ -1,27 +1,42 @@
 div.imagenSerie img{
 width: 29vw;
 width: 50%;
+position: relative;
+right: -20%;
+bottom: -20%;
+
+
 
 }
 
 div.infoSerie {
-  
+  position: absolute;
+  right: -20%;
+  bottom: 5%;
+  font-size: 140%;
+  text-decoration: underline;
+  color: black;
+
+
 }
 
 
-div.divGrande {
+div.container-all {
   display: flex;
   width: 50%;
+  position: absolute;
 
 }
 
 main {
   background-color: red;
+  width: 100%;
 }
 
 body {
-  background-color: black;
-  font-family: sans-serif;
+  background-color: red;
+  font-family: serif;
+  text-decoration: underline;
   color: grey;
   width: 100%;
 }
