@@ -5,12 +5,15 @@ main{
 
 div.Populares{
 
-/*  background-color: rgba(238, 79, 79, 0.63);*/
+  background-color: rgba(238, 79, 79, 0.63);
   margin: 0;
   font-family: serif;
   text-decoration: underline;
   font-variant: small-caps;
   text-align: center;
+}
+li.uk-active {
+width: 24%;
 }
 
 li.uk-active a{
@@ -65,8 +68,4 @@ header a{
   margin-left: 15px;
   letter-spacing: 2.5px;
   font-weight: lighter;
-}
-
-div.buscador {
-  
 }
