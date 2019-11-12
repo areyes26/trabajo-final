@@ -37,7 +37,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
         */
        for(var i = 0; i < resultadoFinalAire.results.length; i++) {
          console.log(resultadoFinalAire.results[i]);
-           listadoAire.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
+           listadoAire.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
 
        }
     })
@@ -47,8 +47,8 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
       .then(function(response) {
           return response.json();
       })
-      .then(function(resultadoFinalAire) {
-          var listadoAire = document.querySelector("#listaMejor ");
+      .then(function(resultadoFinalMejor) {
+          var listadoMejor = document.querySelector("#listaMejor ");
           //console.log(resultadoFinal.results);
 
           /*
@@ -56,9 +56,9 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
               console.log(resultadoFinal.results[i].original_name);
           }
           */
-         for(var i = 0; i < resultadoFinalAire.results.length; i++) {
-           console.log(resultadoFinalAire.results[i]);
-             listadoAire.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
+         for(var i = 0; i < resultadoFinalMejor.results.length; i++) {
+           console.log(resultadoFinalMejor.results[i]);
+             listadoMejor.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalMejor.results[i].poster_path + '">' + '</a>'+ '</li>'
 
          }
       })

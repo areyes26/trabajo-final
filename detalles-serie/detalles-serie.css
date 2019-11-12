@@ -1,1 +1,28 @@
+div.container-all{
+  display: flex;
+  flex-wrap: wrap;
+}
+div.containerImg{
+  width: 30%;
+  height: 35vw;
+  position: relative;
+}
 
+div.imagenSerie{
+height: 84%;
+left: 14%;
+top: 10%;
+position: absolute;
+}
+
+div.imagenSerie img{
+  height: 100%;
+}
+
+div.containerInfo{
+  width: 65%
+}
+
+div.infoSerie{
+  width: 100%;
+}
