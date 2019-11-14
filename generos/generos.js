@@ -1,5 +1,6 @@
 window.onload = function(){
 
+  /* Header y Footer */
 
       fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
       .then(function(response){
