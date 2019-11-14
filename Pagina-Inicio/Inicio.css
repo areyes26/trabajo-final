@@ -53,6 +53,9 @@ header{
   position: fixed;
   z-index: 5;
 }
+h1.paddingParaBarra{
+  padding-top: 5vw;
+}
 
 header img{
 max-width: 135px;
