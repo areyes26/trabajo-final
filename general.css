@@ -88,13 +88,15 @@ form.barra-buscadora input{
 /*Aca termina el Header*/
 
 /*Aca empieza el Main general*/
-body{
+main{
   background-color: rgb(60, 59, 59);
 }
 /*Aca termina el Main genera*/
 
 
-
+footer{
+  width: 100%
+}
 
 .footer {
   width: 100%;
