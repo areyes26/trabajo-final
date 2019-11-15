@@ -1,9 +1,8 @@
 window.onload = function() {
-
   //Paso 1: Leo Storage
 
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
-
+  console.log(recuperoStorage);
   // Si todavía no tenía gifs favoritos
   if (recuperoStorage == null) {
     // Creo una lista vacia
@@ -13,43 +12,24 @@ window.onload = function() {
     seriesFavoritos = JSON.parse(recuperoStorage);
   }
 
-  var datos = new URLSearchParams(location.search);
-  var idGif = datos.get("idGif");
 
-  if (seriesFavoritos.includes(idGif)) {
-    document.querySelector("buttonFav").innerHTML = "QUITAR DE FAVORITOS";
+
+  for (var i = 0; i < seriesFavoritos.length; i++) {
+    if(!seriesFavoritos[i].empty) {
+      // BUSCAR ESE GIF Y MOSTRARLO
+      fetch("https://api.themoviedb.org/3/tv/" + seriesFavoritos[i] + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(serie) {
+          console.log(serie)
+          document.querySelector(".listaFav").innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ serie.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>'+ '</li>'
+        })
+    }
   }
 
 
 
-  fetch("https://api.giphy.com/v1/gifs/" + idGif + "?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU")
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(gif) {
-
-    })
-
-    document.querySelector(".buttonFav").onclick = function() {
 
 
-      //Paso 2: Modificar la informacion
-      // Si el gif ya era favorito
-      if (seriesFavoritos.includes(idGif)) {
-        // Lo quito
-        var index = seriesFavoritos.indexOf(idGif);
-        seriesFavoritos.splice(index, 1);
-        document.querySelector("buttonFav").innerHTML = "AGREGAR FAVORITO";
-      } else {
-        //Lo agrego
-        seriesFavoritos.push(idGif);
-        document.querySelector("buttonFav").innerHTML = "QUITAR DE FAVORITOS";
-      }
-
-
-      //Paso 3: Escribir en storage
-      var infoParaStorage = JSON.stringify(seriesFavoritos);
-      localStorage.setItem("seriesFavoritos", infoParaStorage);
-      console.log(localStorage);
-    }
 }

@@ -53,7 +53,7 @@ var datos = new URLSearchParams(location.search);
 var id = datos.get("id");
 
 if (seriesFavoritos.includes(id)) {
-  document.querySelector("buttonFav").innerHTML = "QUITAR DE FAVORITOS";
+  document.querySelector(".buttonFav").innerHTML = "QUITAR DE FAVORITOS";
 }
 
 
@@ -62,7 +62,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
   .then(function(response) {
     return response.json();
   })
-  .then(function(gif) {
+  .then(function(id) {
 
   })
 
@@ -70,16 +70,16 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
 
 
     //Paso 2: Modificar la informacion
-    // Si el gif ya era favorito
+    // Si la serie ya era favorito
     if (seriesFavoritos.includes(id)) {
       // Lo quito
       var index = seriesFavoritos.indexOf(id);
       seriesFavoritos.splice(index, 1);
-      document.querySelector("buttonFav").innerHTML = "AGREGAR FAVORITO";
+      document.querySelector(".buttonFav").innerHTML = "AGREGAR FAVORITO";
     } else {
       //Lo agrego
       seriesFavoritos.push(id);
-      document.querySelector("buttonFav").innerHTML = "QUITAR DE FAVORITOS";
+      document.querySelector(".buttonFav").innerHTML = "QUITAR DE FAVORITOS";
     }
 
 
