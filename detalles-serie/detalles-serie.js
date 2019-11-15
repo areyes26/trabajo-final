@@ -90,11 +90,37 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
   }
 
 
+/* Trailer Serie */
+
+  fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+    .then(function(respuesta){
+      return respuesta.json();
+    })
+    .then(function(resultadoFinal){
+      console.log(resultadoFinal);
+       var containerTrailer = document.querySelector(".trailerSerie");
+
+       for (var i=0; i<resultadoFinal.results.length; i++){
+         containerTrailer .innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + resultadoFinal.results[i].key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 
 
+       }
+     })
 
 
+/* Recomendados Serie */
+     fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US&page=1")
+       .then(function(respuesta){
+         return respuesta.json();
+       })
+       .then(function(resultadoFinal){
+         console.log(resultadoFinal);
+          var recomen = document.querySelector(".recomendados");
 
+          for (var i=0; i<resultadoFinal.results.length; i++){
+            recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ resultadoFinal.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">' + '</a></li>'
+          }
+        })
 
 
 

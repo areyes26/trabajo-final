@@ -5,7 +5,7 @@ window.addEventListener("load",function(){
   var searchParams = new URLSearchParams(queryString); // con esto encontramos los datos y posiciones  de la querystring
   var buscar  = searchParams.get("buscar");
 
-  var url = "https://api.themoviedb.org/3/search/tv?api_key=3c903afd44fb5710bd25bd4e49418890&language=en-US&query=" + buscar + "&page=1"
+  var url = "https://api.themoviedb.org/3/search/tv?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US&query=" + buscar + "&page=1"
   console.log(url);
   fetch(url)
   .then(function(respuesta){
