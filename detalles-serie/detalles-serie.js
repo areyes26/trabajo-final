@@ -33,7 +33,7 @@ console.log(resultadoFinal);
  var gnre = resultadoFinal.genres
  var losgeneros ="";
  for (var i=0; i<gnre.length; i++){
-   losgeneros += ' <a href="series_xgenero.html?'+ resultadoFinal.genres[i].id+'">' + resultadoFinal.genres[i].name + '</a> '
+   losgeneros += ' <a href="../generos/genero.html?'+ resultadoFinal.genres[i].id+'">' + resultadoFinal.genres[i].name + '</a> '
  }
  info_conteiner.innerHTML += '<h3>Géneros:' +  losgeneros + '</h3>'
  info_conteiner.innerHTML += '<h3>Idioma original:'+  resultadoFinal.original_language + '</h3>'
@@ -118,7 +118,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
           var recomen = document.querySelector(".recomendados");
 
           for (var i=0; i<resultadoFinal.results.length; i++){
-            recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ resultadoFinal.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">' + '</a></li>'
+            recomen.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinal.results[i].poster_path + '">' + '</a>'+ '</li>'
           }
         })
 
