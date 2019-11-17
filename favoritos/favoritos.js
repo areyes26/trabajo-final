@@ -1,4 +1,18 @@
 window.onload = function() {
+
+
+  /*Serie Random*/
+  var numRandom = document.querySelector(".random")
+  function aleatorio(){
+    return Math.floor(Math.random() *9541)
+  }
+
+  console.log(aleatorio());
+
+
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+
+
   //Paso 1: Leo Storage
 
   var recuperoStorage = localStorage.getItem("seriesFavoritos");

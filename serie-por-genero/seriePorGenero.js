@@ -1,5 +1,17 @@
 window.onload = function(){
 
+
+  /*Serie Random*/
+  var numRandom = document.querySelector(".random")
+  function aleatorio(){
+    return Math.floor(Math.random() *9541)
+  }
+
+  console.log(aleatorio());
+
+
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+
 //////////////////Info de la serie
 var querystring = location.search;
 var query2 = new URLSearchParams(querystring)
@@ -29,7 +41,7 @@ fetch(url)
   }
 
   for(var i=0; i<series.length; i++){
-    div.innerHTML+= '<li><a href="../detalles-serie/detalles-serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+    div.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
   if (datos.total_pages == page) {
     window.removeEventListener('scroll', scrolled)

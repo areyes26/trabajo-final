@@ -44,6 +44,17 @@ function vermas() {
      vermas()
    }
  }
+
+ /*Serie Random*/
+ var numRandom = document.querySelector(".random")
+ function aleatorio(){
+   return Math.floor(Math.random() *9541)
+ }
+
+ console.log(aleatorio());
+
+
+ numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
 // var btn = document.querySelector("#page");
 // btn.onclick =  function() {
 //   page++;

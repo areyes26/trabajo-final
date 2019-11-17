@@ -1,5 +1,17 @@
 window.onload = function(){
 
+  /*Serie Random*/
+  var numRandom = document.querySelector(".random")
+  function aleatorio(){
+    return Math.floor(Math.random() *9541)
+  }
+
+  console.log(aleatorio());
+
+
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+
+
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
 
   // Si todavía no tenía gifs favoritos
@@ -33,7 +45,7 @@ console.log(resultadoFinal);
  var gnre = resultadoFinal.genres
  var losgeneros ="";
  for (var i=0; i<gnre.length; i++){
-   losgeneros += ' <a href="../generos/genero.html?'+ resultadoFinal.genres[i].id+'">' + resultadoFinal.genres[i].name + '</a> '
+   losgeneros += ' <a href="../serie-por-genero/seriePorGenero.html?id='+ resultadoFinal.genres[i].id +'&name='+ resultadoFinal.genres[i].name +'">' + resultadoFinal.genres[i].name + '</a> '
  }
  info_conteiner.innerHTML += '<h3>Géneros:' +  losgeneros + '</h3>'
  info_conteiner.innerHTML += '<h3>Idioma original:'+  resultadoFinal.original_language + '</h3>'

@@ -1,5 +1,17 @@
 window.onload = function(){
 
+
+  /*Serie Random*/
+  var numRandom = document.querySelector(".random")
+  function aleatorio(){
+    return Math.floor(Math.random() *9541)
+  }
+
+  console.log(aleatorio());
+
+
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+
 //SERIES POPULARES
 fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US&page=1")
   .then(function(response) {
@@ -16,7 +28,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
       */
      for(var i = 0; i < resultadoFinal.results.length; i++) {
        console.log(resultadoFinal.results[i]);
-         listado.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinal.results[i].poster_path + '">' + '</a>'+ '</li>'
+         listado.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinal.results[i].poster_path + '">' + Descubrir +  '</a>'+ '</li>'
 
      }
   })
@@ -37,7 +49,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
         */
        for(var i = 0; i < resultadoFinalAire.results.length; i++) {
          console.log(resultadoFinalAire.results[i]);
-           listadoAire.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
+           listadoAire.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
 
        }
     })
@@ -58,7 +70,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
           */
          for(var i = 0; i < resultadoFinalMejor.results.length; i++) {
            console.log(resultadoFinalMejor.results[i]);
-             listadoMejor.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinalMejor.results[i].poster_path + '">' + '</a>'+ '</li>'
+             listadoMejor.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinalMejor.results[i].poster_path + '">' + '</a>'+ '</li>'
 
          }
       })
