@@ -11,7 +11,7 @@ window.onload = function(){
 
   numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
 
-
+// FAVORITOS
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
 
   // Si todavía no tenía gifs favoritos
@@ -23,6 +23,17 @@ window.onload = function(){
     seriesFavoritos = JSON.parse(recuperoStorage);
   }
 
+//VER MAS TARDE
+var recuperoStorageVer = localStorage.getItem("seriesFavoritosVer");
+
+// Si todavía no tenía gifs favoritos
+if (recuperoStorageVer == null) {
+  // Creo una lista vacia
+  seriesFavoritosVer = [];
+} else {
+  // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+  seriesFavoritosVer = JSON.parse(recuperoStorageVer);
+}
 
 
 
@@ -100,6 +111,50 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
     localStorage.setItem("seriesFavoritos", infoParaStorage);
     console.log(localStorage);
   }
+
+
+
+
+  /*ver mas tarde */
+
+  var datos = new URLSearchParams(location.search);
+  var idVer = datos.get("id");
+
+  if (seriesFavoritos.includes(idVer)) {
+    document.querySelector(".buttonVer").innerHTML = "QUITAR DE VER";
+  }
+
+
+
+  fetch("https://api.themoviedb.org/3/tv/" + idVer + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+    .then(function(response) {
+      return response.json();
+    })
+  
+
+    document.querySelector(".buttonVer").onclick = function() {
+
+
+      //Paso 2: Modificar la informacion
+      // Si la serie ya era favorito
+      if (seriesFavoritosVer.includes(idVer)) {
+        // Lo quito
+        var index = seriesFavoritosVer.indexOf(idVer);
+        seriesFavoritosVer.splice(index, 1);
+        document.querySelector(".buttonVer").innerHTML = "AGREGAR ver";
+      } else {
+        //Lo agrego
+        seriesFavoritosVer.push(idVer);
+        document.querySelector(".buttonVer").innerHTML = "QUITAR DE ver";
+      }
+
+
+      //Paso 3: Escribir en storage
+      var infoParaStorage = JSON.stringify(seriesFavoritosVer);
+      localStorage.setItem("seriesFavoritosVer", infoParaStorage);
+      console.log(localStorage);
+    }
+
 
 
 /* Trailer Serie */
