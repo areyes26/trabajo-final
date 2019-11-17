@@ -25,7 +25,7 @@ function vermas() {
        titulo.style.color = "Red"
      }
      for(var i=0; i<datosFinales.length; i++){
-       destino.innerHTML+= '<li><a href="../detalles-serie/detalles-series.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+       destino.innerHTML+= '<li><a href="../detalles-serie/detalles-serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
      if (datos.total_pages == page) {
        console.log('cortamo');

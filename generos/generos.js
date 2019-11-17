@@ -12,8 +12,7 @@ window.onload = function(){
 
         for (var i = 0; i < resultadoFinal.genres.length; i++){
           console.log(resultadoFinal.genres[i]);
-          generos.innerHTML += '<li>'+'<a href="#">'+
-           resultadoFinal.genres[i].name + '</a>' + '</li>'
+          generos.innerHTML += '<li>'+'<a href="../serie-por-genero/seriePorGenero.html?id='+ resultadoFinal.genres[i].id +'&name='+ resultadoFinal.genres[i].name +'">'+ resultadoFinal.genres[i].name + '</a>' + '</li>'
         }
       })
 

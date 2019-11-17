@@ -100,8 +100,8 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
       console.log(resultadoFinal);
        var containerTrailer = document.querySelector(".trailerSerie");
 
-       for (var i=0; i<resultadoFinal.results.length; i++){
-         containerTrailer .innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + resultadoFinal.results[i].key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+       for (var i=0; i<2; i++){
+         containerTrailer .innerHTML += '<div>' + '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + resultadoFinal.results[i].key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + "</div>"
 
 
        }
@@ -115,18 +115,18 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
        })
        .then(function(resultadoFinal){
          console.log(resultadoFinal);
-          var recomen = document.querySelector(".recomendados");
+          var recomen = document.querySelector("#recomendados");
 
           for (var i=0; i<resultadoFinal.results.length; i++){
-            recomen.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + resultadoFinal.results[i].poster_path + '">' + '</a>'+ '</li>'
+            recomen.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id+'"> '+'<img  class= "imgreco" src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">' + '</a></li>'
           }
         })
 
 
 
+// ESTO ES PARA CELULAR //
 
-
-
+// '<li class="uk-width-3-4">'+ '<div class="uk-panel">' + '<a href="../detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinal.results[i].poster_path + '">' + '</a>' + '<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">' + '<h3 class="uk-margin-remove">'+'Bottom'+'</h3>' + '<p class="uk-margin-remove">' + 'holaaaa' +'</p>' + '</div>' + '</div>' + '</li>'
 
 
 

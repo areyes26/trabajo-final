@@ -26,3 +26,28 @@ div.containerInfo{
 div.infoSerie{
   width: 100%;
 }
+div.containerRecomendados{
+  width: 70%;
+  margin-left: 15%;
+}
+
+div.containerTrailer{
+  margin-top: 3vw;
+  width: 100%;
+  margin-bottom: 3vw;
+}
+
+div.trailerSerie{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.imgreco {
+
+  border-radius: 65px 65px 65px 65px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    max-width: 80%;
+}
