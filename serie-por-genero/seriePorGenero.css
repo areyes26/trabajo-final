@@ -1,0 +1,13 @@
+ul.listaGeneros{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+margin-bottom: 0;
+justify-content: space-around;
+}
+
+ul.listaGeneros li{
+  width: 21%;
+  margin-top: 1vw;
+}
+}
