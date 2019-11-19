@@ -32,7 +32,7 @@ fetch(url)
   var div = document.querySelector(".listaGeneros");
   var series = datos.results;
   /*Titulo*/
-  var titulo = document.querySelector("#tituloSerie");
+  var titulo = document.querySelector(".tituloSerie");
   var name = query2.get("name")
   titulo.innerHTML = name;
 

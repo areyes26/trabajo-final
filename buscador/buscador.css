@@ -7,6 +7,29 @@ ul.resultados{
 }
 
 ul.resultados li{
-  width: 21%;
-  margin-top: 1vw;
+  width: 21vw;
+  margin-top: 3vw;
+}
+
+
+ul.resultados li a img{
+  width: 100%;
+  border-style: solid;
+  border-color: rgba(143, 28, 28,0.33);
+  border-width:  0.4vw;
+  border-radius: 4%
+}
+
+ul.resultados li:hover{
+  width: 22vw;
+  transition: width 0.5s;
+
+}
+
+ul.resultados li:hover a img{
+  border-style: solid;
+  border-color: rgba(143, 28, 28,0.33);
+  border-width:  0.6vw;
+  border-radius: 5%
+
 }

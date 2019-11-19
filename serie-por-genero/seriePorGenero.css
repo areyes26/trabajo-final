@@ -8,6 +8,9 @@ justify-content: space-around;
 
 ul.listaGeneros li{
   width: 21%;
-  margin-top: 1vw;
+
 }
+}
+h1.tituloSerie {
+  margin: 0px;
 }

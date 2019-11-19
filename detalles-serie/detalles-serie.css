@@ -29,6 +29,12 @@ div.infoSerie{
 div.containerRecomendados{
   width: 70%;
   margin-left: 15%;
+  display: none;
+}
+div.show {
+  width: 70%;
+  margin-left: 15%;
+  display: block;
 }
 
 div.containerTrailer{
