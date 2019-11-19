@@ -3,6 +3,10 @@ window.addEventListener("load", function() {
   var searchParams = new URLSearchParams(queryString); //Obtenemos las posiciones y los datos de la queryString
   var buscar = searchParams.get("buscar"); //con el método get obtenenemos el valor del término a buscar. En este obtenenemos lo que escribió el usuario en el campo de busqueda cuyo "name" es "search" (name="search").
   var page = 1;
+
+// voy a llamar a la funcion que esta debajo, solo si el usuario ingreso data a buscar!!!
+//validar si el usuario ingreso algo en el input del form .
+
   vermas()
 
   function vermas() {
@@ -12,18 +16,21 @@ window.addEventListener("load", function() {
         return respuesta.json();
       })
       .then(function(datos) {
+        console.log(datos);
         var destino = document.querySelector(".resultados");
         var datosFinales = datos.results;
         var titulo = document.querySelector(".primero");
         titulo.innerText = buscar;
         console.log(datos, page);
-        console.log(datos);
         if (datos.results.length === 0 && page == 1) {
           titulo.innerText = "No se encontraron resultados";
           titulo.style.textTransform = "none";
           titulo.style.padding = "20%"
           titulo.style.textAlign = "center"
           titulo.style.color = "Red"
+
+          // ACA TIENE QUE DISPARAR LA NOTIFICACION
+
         }
         for (var i = 0; i < datosFinales.length; i++) {
           if (datos.results[i].poster_path == null) {

@@ -1,6 +1,7 @@
 div.container-all{
   display: flex;
   flex-wrap: wrap;
+  background-color: red;
 }
 div.containerImg{
   width: 30%;
@@ -26,6 +27,7 @@ div.containerInfo{
 div.infoSerie{
   width: 100%;
 }
+<<<<<<< Updated upstream
 div.containerRecomendados{
   width: 70%;
   margin-left: 15%;
@@ -56,4 +58,16 @@ div.trailerSerie{
     margin-left: 1vw;
     margin-right: 1vw;
     max-width: 80%;
+=======
+
+div.recomendados {
+  background-color: rgba(238, 79, 79, 0.63);
+  margin: 0;
+  font-family: serif;
+  text-decoration: underline;
+  font-variant: small-caps;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+>>>>>>> Stashed changes
 }
