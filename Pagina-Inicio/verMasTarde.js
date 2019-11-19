@@ -26,7 +26,12 @@ for (var i = 0; i < seriesFavoritosVer.length; i++) {
       .then(function(serieVer) {
         console.log(serieVer)
         var listaVerMAs = document.querySelector("#listaVer")
-        listaVerMAs.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serieVer.poster_path + '">' + '</a>'+ '</li>'
+        if (serieVer.poster_path == null) {
+          listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="images/not-found.png">' + '</a>'+ '</li>'
+
+        }
+        else{listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serieVer.poster_path + '">' + '</a>'+ '</li>'
+      }
       })
   }
 }

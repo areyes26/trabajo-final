@@ -37,7 +37,12 @@ window.onload = function() {
         })
         .then(function(serie) {
           console.log(serie)
-          document.querySelector(".listaFav").innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ serie.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>'+ '</li>'
+          if (serie.poster_path == null) {
+            var posterNot = document.querySelector(".listaFav")
+            posterNot.innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ serie.id +'">' + '<img src="../images/not-found.png">' + '</a>'+ '</li>'
+          }
+          else{document.querySelector(".listaFav").innerHTML += '<li>'+ '<a href="../detalles-serie/detalles-serie.html?id='+ serie.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>'+ '</li>'
+        }
         })
     }
   }

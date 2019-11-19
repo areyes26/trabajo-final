@@ -67,8 +67,11 @@ window.onload = function() {
       info_conteiner.innerHTML += '<h3><strong>Fecha de estreno: </strong>' + resultadoFinal.first_air_date + '</h3>'
 
       /* Imagen de la serie */
-      imgSerie.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.poster_path + '">'
-      
+      if (resultadoFinal.poster_path == null) {
+        imgSerie.innerHTML = '<img src="../images/not-found.png">'
+      }
+      else{imgSerie.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.poster_path + '">'
+    }
     })
 
 
@@ -196,8 +199,12 @@ window.onload = function() {
       var recomen = document.querySelector("#recomendados");
 
       for (var i = 0; i < resultadoFinal.results.length; i++) {
+        if (resultadoFinal.results[i].poster_path == null) {
+        recomen.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + resultadoFinal.results[i].id + '"> ' + '<img  class= "imgreco" src="../images/not-found.png">' + '</a></li>'
+        }
+      else {
         recomen.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + resultadoFinal.results[i].id + '"> ' + '<img  class= "imgreco" src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">' + '</a></li>'
-
+      }
       }
     })
 

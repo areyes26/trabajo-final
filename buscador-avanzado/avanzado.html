@@ -14,15 +14,15 @@
 
   <meta charset="utf-8">
   <link rel="stylesheet" href="../general.css">
-  <script src="generos.js" charset="utf-8"></script>
+  <script type="text/javascript" src="avanzado2.js"></script>
+  <link rel="stylesheet" href="../buscador/buscador.css">
   <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
-
+  <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
   <!-- UIkit JS -->
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
-
   <title></title>
 </head>
 
@@ -87,21 +87,21 @@
       </div>
     </div>
   </header>
-  <main style="height: 85vh;">
+
+  <!-- main -->
+  <main>
+
     <div class="paddingParaBarra"></div>
-    <div class="generosContaines">
 
-      <ul class="listaGeneros">
-
+    <h1 id="titulos" class="primero"></h1>
+    <div class="div-resultados">
+      <ul class="resultados">
+        <!-- api -->
       </ul>
-
     </div>
-
-
-
   </main>
 
-  <footer style="height: 15vh;">
+  <footer>
     <div class="legal">
       <a href="https://www.themoviedb.org/"> <img src="../images/ordabool.themoviedb.png" alt=""> </a>
       <p>The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something
@@ -113,6 +113,8 @@
     </div>
 
   </footer>
+
+
 
 </body>
 

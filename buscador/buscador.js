@@ -26,12 +26,11 @@ window.addEventListener("load", function() {
           titulo.style.color = "Red"
         }
         for (var i = 0; i < datosFinales.length; i++) {
-          if(datos.results[i].poster_path == null) {
+          if (datos.results[i].poster_path == null) {
             var posterNot = document.querySelector(".resultados")
             posterNot.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + datos.results[i].id + '"> ' + '<img src="../images/not-found.png">' + '</a></li>'
 
-          }
-          else{
+          } else {
             destino.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w300/' + datos.results[i].poster_path + '">' + '</a></li>'
           }
 

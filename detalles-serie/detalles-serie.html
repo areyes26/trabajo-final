@@ -1,10 +1,22 @@
   <!DOCTYPE html>
-<html lang="en" dir="ltr">
+  <html lang="en" dir="ltr">
+
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152892669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152892669-1');
+</script>
+
     <meta charset="utf-8">
     <script src="detalles-serie.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="detalles-serie.css">
+    <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
 
@@ -21,63 +33,103 @@
     <header>
       <div class="Menu">
         <div class="img-logo">
-          <a href="../Pagina-Inicio/Inicio.html"> <img src="../images/logo.png"  class="logo"alt=""> </a>
+          <a href="../index.html"> <img src="../images/logo.png" class="logo" alt=""> </a>
         </div>
-          <ul class="botones-menu">
-            <li><a href="../Pagina-Inicio/Inicio.html">Inicio</a></li>
-            <li><a href="../generos/genero.html">Generos</a></li>
-            <li><a class="random" href="#">Descubrir</a></li>
-            <li><a href="../favoritos/favoritos.html">Favoritos</a></li>
-          </ul>
+        <ul class="botones-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../generos/genero.html">Generos</a></li>
+          <li><a class="random" href="#">Descubrir</a></li>
+          <li><a href="../favoritos/favoritos.html">Favoritos</a></li>
+        </ul>
       </div>
       <div class="buscador">
-         <form class="barra-buscadora" action="../buscador/buscador.html" method="get">
-              <input type="search" value="" name="buscar">
-              <button type="button" name="button">  <a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a></button>
-            </form>
+        <form class="barra-buscadora" action="../buscador/buscador.html" method="get">
+          <input type="search" value="" name="buscar">
+        </form>
+      </div>
+      <!-- Buscador Avanzado-->
+      <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
+      <div id="modal-avan" uk-modal>
+        <div id="buscadorAvanzado" class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Ingrese su busqueda</h2>
+          <h4 class="uk-modal-subtitle">Datos a tener en cuenta: <br> Solo es posible elegir uno de los dos filtro, es decir, se puede buscar un genero en especifico o excluir algun genero</h4>
+          <br>
+          <form class="avanzado" action="../buscador-avanzado/avanzado.html" method="get">
+            <label for="generos">
+              <h4>Buscar por Genero:</h4>
+            </label>
+            <select class="incluir" name="incluir">
+              <!-- Aca va el genero que se desea Buscar -->
+            </select>
+            <br>
+            <label for="">
+              <h4>Excluir por Genero:</h4>
+            </label>
+            <select class="excluir" name="excluir">
+              <!-- Aca van el genero que se desean excluir-->
+            </select>
+            <br>
+            <label for="">
+              <h4>Filtrar Resultados Por:</h4>
+            </label>
+            <select class="orden" name="orden">
+              <option value="vote_average.desc">Mayor cantidad de votos</option>
+              <option value="popularity.desc">Popularidad</option>
+              <option value="first_air_date.desc">Primera vez al aire</option>
+            </select>
+            <br>
+            <label for="año">
+              <h4>Año de estreno:</h4>
+            </label>
+            <input type="number" name="año" value="">
+            <br>
+            <button class="uk-button uk-button-default uk-modal-close" type="Cancel">Cancelar</button>
+            <button class="uk-button uk-button-primary" type="Search">Buscar</button>
+          </form>
+        </div>
       </div>
     </header>
-<main>
+    <main>
 
-<div class="paddingParaBarra"></div>
+      <div class="paddingParaBarra"></div>
 
-<div class="container-all">
+      <div class="container-all">
 
-  <div class="containerImg">
+        <div class="containerImg">
 
-    <div class="imagenSerie">
+          <div class="imagenSerie">
 
-  <!--Aca va el poste de cada serie -->
+            <!--Aca va el poste de cada serie -->
 
-    </div>
-  </div>
+          </div>
+        </div>
 
 
-  <div class="containerInfo">
+        <div class="containerInfo">
 
-      <div class="infoSerie">
+          <div class="infoSerie">
 
-      <!--Aca va la info de cada serie -->
+            <!--Aca va la info de cada serie -->
 
-      </div>
-      <button type="button" name="button"class="buttonFav"> Hacer Favorito</button>
-      <button type="button" name="button" class="buttonVer">VER MAS TARDE</button>
-  </div>
+          </div>
+          <button type="button" name="button" class="buttonFav"> Hacer Favorito</button>
+          <button type="button" name="button" class="buttonVer">VER MAS TARDE</button>
+        </div>
 
-  <div class="containerTrailer">
+        <div class="containerTrailer">
 
-    <h1>Traile</h1>
+          <h1>Traile</h1>
 
-  <div class="trailerSerie">
+          <div class="trailerSerie">
 
-  </div>
+          </div>
 
-  </div>
+        </div>
 
-  <button type="send" name="Recomendados" id="botonRecomendaciones">Ver Recomendados</button>
-  <div class="containerRecomendados">
-    <h1>Series  Recomendadas</h1>
-    <!-- <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+        <button type="send" name="Recomendados" id="botonRecomendaciones">Ver Recomendados</button>
+        <div class="containerRecomendados">
+          <h1>Series Recomendadas</h1>
+          <!-- <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
 
         <ul class="uk-slider-items uk-grid" id="recomendados">
 
@@ -89,49 +141,51 @@
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
     </div> -->
-    <div uk-slider>
+          <div uk-slider>
 
-        <div class="uk-position-relative">
+            <div class="uk-position-relative">
 
-            <div class="uk-slider-container uk-light">
+              <div class="uk-slider-container uk-light">
                 <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" id="recomendados">
 
                 </ul>
-            </div>
+              </div>
 
-            <div class="uk-hidden@s uk-light">
+              <div class="uk-hidden@s uk-light">
                 <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                 <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
-            </div>
+              </div>
 
-            <div class="uk-visible@s">
+              <div class="uk-visible@s">
                 <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                 <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+              </div>
+
             </div>
+
+          </div>
 
         </div>
 
-    </div>
+      </div>
+    </main>
 
-  </div>
-
-</div>
-</main>
-
-<footer>
+    <footer>
       <div class="legal">
-        <a href="https://www.themoviedb.org/">  <img src="../images/ordabool.themoviedb.png" alt=""> </a>
-        <p>The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something we're incredibly proud of. Put simply, we live and breathe community and that's precisely what makes us different.</p>
+        <a href="https://www.themoviedb.org/"> <img src="../images/ordabool.themoviedb.png" alt=""> </a>
+        <p>The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something
+          we're incredibly proud of. Put simply, we live and breathe community and that's precisely what makes us different.</p>
       </div>
 
       <div class="nombres">
         <p style="margin-bottom:0;">Matias Salazar, <br>Ariel Reyes, <br>Manuel Simon</p>
       </div>
 
-</footer>
+    </footer>
 
 
 
 
   </body>
-</html>
+
+  </html>

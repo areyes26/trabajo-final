@@ -88,6 +88,28 @@ form.barra-buscadora input{
   border: 0;
   margin: 0;
 }
+
+
+/* modal BUSQUEDA*/
+#avanzada {
+  margin: 3%;
+}
+
+#buscadorAvanzado {
+  background-color: #222;
+  border-radius: 20px;
+}
+
+#buscadorAvanzado form {
+  display: flex;
+  flex-direction: column;
+}
+
+#buscadorAvanzado h2 {
+  color: white;
+  text-align: center;
+}
+
 /*Aca termina el Header*/
 
 /*Aca empieza el Main general*/
