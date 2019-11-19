@@ -1,12 +1,12 @@
 window.addEventListener("load", function() {
 
-  document.querySelector("barra-buscadora").onsubmit = function(event) {
-    var loQueEscribio = document.querySelector("form input").value
+  document.querySelector(".barra-buscadora").onsubmit = function(event) {
+    var loQueEscribio = document.querySelector(".buscadorNomal").value
 
-    if (ESO TIENE MENOS DE 3 CARACTERES) {
+    if (loQueEscribio.length.value > 3) {
       event.preventDefault()
-
-        UIkit.notification({message: 'Notification message'});
+      alert("NO funciona esto")
+        // UIkit.notification({message: 'Notification message'});
     }
   }
 
