@@ -36,56 +36,57 @@
         <a href="index.html"> <img src="images/logo.png" class="logo" alt=""> </a>
       </div>
       <ul class="botones-menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="generos/genero.html">Generos</a></li>
-        <li><a class="random" href="#">Descubrir</a></li>
-        <li><a href="favoritos/favoritos.html">Favoritos</a></li>
+        <li class="inicioHeader"><a  href="index.html">Inicio</a></li>
+        <li class="generosHeader"><a href="generos/genero.html">Generos</a></li>
+        <li class="randomHeader"><a class="random" href="#">Descubrir</a></li>
+        <li class="favoritosHeader"><a href="favoritos/favoritos.html">Favoritos</a></li>
       </ul>
     </div>
     <div class="buscador">
       <form class="barra-buscadora" action="buscador/buscador.html" method="get">
         <input type="search"  class="buscadorNormal" value="" name="buscar">
       </form>
-    </div>
-    <!-- Buscador Avanzado-->
-    <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
-    <div id="modal-avan" uk-modal>
-      <div id="buscadorAvanzado" class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title">Ingrese su busqueda</h2>
-        <h4 class="uk-modal-subtitle">Datos a tener en cuenta: <br> Solo es posible elegir uno de los dos filtro, es decir, se puede buscar un genero en especifico o excluir algun genero</h4>
-        <br>
-        <form class="avanzado" action="buscador-avanzado/avanzado.html" method="get">
-          <label for="generos">
-            <h4>Buscar por Genero:</h4>
-          </label>
-          <select class="incluir" name="incluir">
-            <!-- Aca va el genero que se desea Buscar -->
-          </select>
+      <!-- Buscador Avanzado-->
+      <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
+      <div id="modal-avan" uk-modal>
+        <div id="buscadorAvanzado" class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">Ingrese su busqueda</h2>
+          <h4 class="uk-modal-subtitle">Datos a tener en cuenta: <br> Solo es posible elegir uno de los dos filtro, es decir, se puede buscar un genero en especifico o excluir algun genero</h4>
           <br>
-          <label for="">
-            <h4>Excluir por Genero:</h4>
-          </label>
-          <select class="excluir" name="excluir">
-            <!-- Aca van el genero que se desean excluir-->
-          </select>
-          <br>
-          <label for="">
-            <h4>Filtrar Resultados Por:</h4>
-          </label>
-          <select class="orden" name="orden">
-            <option value="vote_average.desc">Mayor cantidad de votos</option>
-            <option value="popularity.desc">Popularidad</option>
-            <option value="first_air_date.desc">Primera vez al aire</option>
-          </select>
-          <br>
-          <label for="año">
-            <h4>Año de estreno:</h4>
-          </label>
-          <input type="number" name="año" value="">
-          <br>
-          <button class="uk-button uk-button-default uk-modal-close" type="Cancel">Cancelar</button>
-          <button class="uk-button uk-button-primary" type="Search">Buscar</button>
-        </form>
+          <form class="avanzado" action="buscador-avanzado/avanzado.html" method="get">
+            <label for="generos">
+              <h4>Buscar por Genero:</h4>
+            </label>
+            <select class="incluir" name="incluir">
+              <!-- Aca va el genero que se desea Buscar -->
+            </select>
+            <br>
+            <label for="">
+              <h4>Excluir por Genero:</h4>
+            </label>
+            <select class="excluir" name="excluir">
+              <!-- Aca van el genero que se desean excluir-->
+            </select>
+            <br>
+            <label for="">
+              <h4>Filtrar Resultados Por:</h4>
+            </label>
+            <select class="orden" name="orden">
+              <option value="vote_average.desc">Mayor cantidad de votos</option>
+              <option value="popularity.desc">Popularidad</option>
+              <option value="first_air_date.desc">Primera vez al aire</option>
+            </select>
+            <br>
+            <label for="año">
+              <h4>Año de estreno:</h4>
+            </label>
+            <input type="number" name="año" value="">
+            <br>
+            <button class="uk-button uk-button-default uk-modal-close" type="Cancel">Cancelar</button>
+            <br><br>
+            <button class="uk-button uk-button-primary" type="Search">Buscar</button>
+          </form>
+        </div>
       </div>
     </div>
   </header>

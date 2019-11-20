@@ -17,6 +17,11 @@ if (recuperoStorageVer == null) {
 
 
 for (var i = 0; i < seriesFavoritosVer.length; i++) {
+  if(seriesFavoritosVer.length < 4 ){
+    var noMostrarVer = document.querySelector(".verMasTarde")
+        noMostrarVer.classList.toggle("verMasTardeNot")
+  }
+else{
   if(!seriesFavoritosVer[i].empty) {
     // BUSCAR ESE GIF Y MOSTRARLO
     fetch("https://api.themoviedb.org/3/tv/" + seriesFavoritosVer[i] + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
@@ -33,6 +38,7 @@ for (var i = 0; i < seriesFavoritosVer.length; i++) {
         else{listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serieVer.poster_path + '">' + '</a>'+ '</li>'
       }
       })
+  }
   }
 }
 })
