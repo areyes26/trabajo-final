@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
 
   document.querySelector(".barra-buscadora").onsubmit = function(event) {
     var loQueEscribio = document.querySelector(".buscadorNomal").value
-
+    console.log(loQueEscribio)
     if (loQueEscribio.length.value > 3) {
       event.preventDefault()
       alert("NO funciona esto")
