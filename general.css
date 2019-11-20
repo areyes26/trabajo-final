@@ -44,15 +44,19 @@ ul.botones-menu{
   width: 90%;
   height: 100%;
   justify-content: space-around;
+  position: relative;
 }
 ul.botones-menu li{
   width: 20%;
-  height: 100%
+  height: 60%;
+  top: 20%;
+  position: absolute;
 }
 ul.botones-menu li a{
   color: black;
   width: 100%;
-  height: 100%
+  height: 100%;
+  font-size: 1.7vw;
 }
 div.img-logo{
   width: 10%;
@@ -72,12 +76,12 @@ div.buscador{
 }
 form.barra-buscadora{
   width: 50%;
-  height: 26%;
+  height:40 %;
   position: absolute;
-  left: 25%;
-  right:25%;
-  top: 37%;
-  bottom: 37%;
+  left: 35%;
+  right:15%;
+  top: 30%;
+  bottom: 30%;
 
 }
 form.barra-buscadora input{
@@ -89,6 +93,10 @@ form.barra-buscadora input{
   margin: 0;
 }
 
+.buscador a{
+position: absolute;
+margin: 0;
+}
 
 /* modal BUSQUEDA*/
 #avanzada {
