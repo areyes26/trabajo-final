@@ -17,6 +17,7 @@
   <script type="text/javascript" src="avanzado2.js"></script>
   <link rel="stylesheet" href="../buscador/buscador.css">
   <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
+    <script src="../buscador/validacionBuscador.js" charset="utf-8"></script>
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
   <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
@@ -45,10 +46,15 @@
         <input type="search" value="" name="buscar">
       </form>
     </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <div class="paddingParaBarra"></div>
     <!-- Buscador Avanzado-->
     <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
-    <div id="modal-avan" uk-modal>
-      <div id="buscadorAvanzado" class="uk-modal-dialog uk-modal-body">
+
         <h2 class="uk-modal-title">Ingrese su busqueda</h2>
         <h4 class="uk-modal-subtitle">Datos a tener en cuenta: <br> Solo es posible elegir uno de los dos filtro, es decir, se puede buscar un genero en especifico o excluir algun genero</h4>
         <br>
@@ -84,14 +90,6 @@
           <button class="uk-button uk-button-default uk-modal-close" type="Cancel">Cancelar</button>
           <button class="uk-button uk-button-primary" type="Search">Buscar</button>
         </form>
-      </div>
-    </div>
-  </header>
-
-  <!-- main -->
-  <main>
-
-    <div class="paddingParaBarra"></div>
 
     <h1 id="titulos" class="primero"></h1>
     <div class="div-resultados">
