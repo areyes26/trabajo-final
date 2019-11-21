@@ -81,7 +81,7 @@ window.onload = function() {
   var id = datos.get("id");
 
   if (seriesFavoritos.includes(id)) {
-    document.querySelector(".buttonFav").innerHTML = "QUITAR DE FAVORITOS";
+    document.querySelector("#buttonFav").innerHTML = "QUITAR DE FAVORITOS";
   }
 
 
@@ -94,7 +94,7 @@ window.onload = function() {
 
     })
 
-  document.querySelector(".buttonFav").onclick = function() {
+  document.querySelector("#buttonFav").onclick = function() {
 
 
     //Paso 2: Modificar la informacion
@@ -126,7 +126,7 @@ window.onload = function() {
   var idVer = datos.get("id");
 
   if (seriesFavoritosVer.includes(idVer)) {
-    document.querySelector(".buttonVer").innerHTML = "QUITAR DE VER MAS TARDE";
+    document.querySelector("#buttonVer").innerHTML = "QUITAR DE VER MAS TARDE";
   }
 
 
@@ -137,7 +137,7 @@ window.onload = function() {
     })
 
 
-  document.querySelector(".buttonVer").onclick = function() {
+  document.querySelector("#buttonVer").onclick = function() {
 
 
     //Paso 2: Modificar la informacion
@@ -146,11 +146,11 @@ window.onload = function() {
       // Lo quito
       var index = seriesFavoritosVer.indexOf(idVer);
       seriesFavoritosVer.splice(index, 1);
-      document.querySelector(".buttonVer").innerHTML = "VER MAS TARDE";
+      document.querySelector("#buttonVer").innerHTML = "VER MAS TARDE";
     } else {
       //Lo agrego
       seriesFavoritosVer.push(idVer);
-      document.querySelector(".buttonVer").innerHTML = "QUITAR DE VER MAS TARDE";
+      document.querySelector("#buttonVer").innerHTML = "QUITAR DE VER MAS TARDE";
     }
 
 
@@ -171,11 +171,15 @@ window.onload = function() {
     .then(function(resultadoFinal) {
       console.log(resultadoFinal);
       var containerTrailer = document.querySelector(".trailerSerie");
+      var contenedorSeries = document.querySelector(".diceTrailer")
 
       for (var i = 0; i < 2; i++) {
-        containerTrailer.innerHTML += '<div>' + '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + resultadoFinal.results[i].key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' + "</div>"
-
-
+console.log(resultadoFinal);
+        if (resultadoFinal.results.length <1) {
+          contenedorSeries.innerHTML = '<h1>'+'</h1>'
+        }else {
+          containerTrailer.innerHTML += '<div >' + '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + resultadoFinal.results[i].key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>' + "</div>"
+        }
       }
     })
 
@@ -197,8 +201,13 @@ window.onload = function() {
     .then(function(resultadoFinal) {
       console.log(resultadoFinal);
       var recomen = document.querySelector("#recomendados");
-
+      var nomostrar = document.querySelector(".containerRecomendados")
       for (var i = 0; i < resultadoFinal.results.length; i++) {
+        if (resultadoFinal.results.length === 0) {
+          nomostrar.innerHTML += '<h1>'+'</h1>'
+        }
+        else {
+
         if (resultadoFinal.results[i].poster_path == null) {
         recomen.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + resultadoFinal.results[i].id + '"> ' + '<img  class= "imgreco" src="../images/not-found.png">' + '</a></li>'
         }
@@ -206,6 +215,8 @@ window.onload = function() {
         recomen.innerHTML += '<li><a href="../detalles-serie/detalles-serie.html?id=' + resultadoFinal.results[i].id + '"> ' + '<img  class= "imgreco" src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">' + '</a></li>'
       }
       }
+      }
+      console.log(resultadoFinal.results.length);
     })
 
 

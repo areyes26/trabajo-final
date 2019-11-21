@@ -31,11 +31,13 @@ else{
       .then(function(serieVer) {
         console.log(serieVer)
         var listaVerMAs = document.querySelector("#listaVer")
+        var tituloMasTarde = document.querySelector(".tituloVerMas")
+        tituloMasTarde.innerHTML = '<hi>'+ 'Series Ver mas tarde' +'  </h1>'
         if (serieVer.poster_path == null) {
           listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="images/not-found.png">' + '</a>'+ '</li>'
 
         }
-        else{listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serieVer.poster_path + '">' + '</a>'+ '</li>'
+        else{listaVerMAs.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ serieVer.id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + serieVer.poster_path + '">' + '</a>'+ '</li>'
       }
       })
   }

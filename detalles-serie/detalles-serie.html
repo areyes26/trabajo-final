@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="detalles-serie.css">
     <script src="../buscador/validacionBuscador.js" charset="utf-8"></script>
     <script src="../buscador-avanzado/avanzado.js" charset="utf-8"></script>
-    <script src="buscador/validacionBuscador.js" charset="utf-8"></script>
+
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
 
@@ -49,7 +49,7 @@
       </div>
       <div class="buscador">
         <form class="barra-buscadora" action="../buscador/buscador.html" method="get">
-          <input type="search"  class="buscadorNormal" value="" name="buscar">
+          <input class="buscadorNomal"type="search" value="" name="buscar" required>
         </form>
         <!-- Buscador Avanzado-->
         <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
@@ -63,6 +63,7 @@
                 <h4>Buscar por Genero:</h4>
               </label>
               <select class="incluir" name="incluir">
+                <option value="">ninguno</option>
                 <!-- Aca va el genero que se desea Buscar -->
               </select>
               <br>
@@ -70,6 +71,7 @@
                 <h4>Excluir por Genero:</h4>
               </label>
               <select class="excluir" name="excluir">
+                <option value="">ninguno</option>
                 <!-- Aca van el genero que se desean excluir-->
               </select>
               <br>
@@ -117,23 +119,25 @@
             <!--Aca va la info de cada serie -->
 
           </div>
-          <button type="button" name="button" class="buttonFav"> Hacer Favorito</button>
-          <button type="button" name="button" class="buttonVer">VER MAS TARDE</button>
+          <button class="uk-button uk-button-danger" type="button" name="button" id="buttonFav"style="background-color: rgb(143, 28, 28);"> Hacer Favorito</button>
+          <button class="uk-button uk-button-danger" type="button" name="button" id="buttonVer"style="background-color: rgb(143, 28, 28);">VER MAS TARDE</button>
         </div>
 
         <div class="containerTrailer">
 
-          <h1>Traile</h1>
+          <h1 class="diceTrailer">Trailer</h1>
 
           <div class="trailerSerie">
 
           </div>
 
         </div>
+        <div class="botonDeFav">
+          <button class="uk-button uk-button-danger" type="send" name="Recomendados" id="botonRecomendaciones" style="background-color: rgb(143, 28, 28);">Ver Recomendados</button>
 
-        <button type="send" name="Recomendados" id="botonRecomendaciones">Ver Recomendados</button>
+        </div>
         <div class="containerRecomendados">
-          <h1>Series Recomendadas</h1>
+          <h1 >Series Recomendadas</h1>
           <!-- <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
 
         <ul class="uk-slider-items uk-grid" id="recomendados">
