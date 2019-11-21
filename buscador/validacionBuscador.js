@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
 
 
   document.querySelector(".barra-buscadora").onsubmit = function(event) {
-    var loQueEscribio = document.querySelector(".buscadorNormal").value
+    var loQueEscribio = document.querySelector(".buscadorNomal").value
     event.preventDefault()
 
 console.log(loQueEscribio.length);
@@ -15,15 +15,16 @@ UIkit.notification({
     status: 'primary',
     pos: 'top-right',
     timeout: 5000
-});
+})
+//
+// document.querySelector(".barra-buscadora").onsubmit = function() {}
+//  // {
+//  //
+//  //  UIkit.notification({message: 'Notification message'});
+//  //  }
+// }
 
-document.querySelector(".barra-buscadora").onsubmit = function() {}
- // {
- //
- //  UIkit.notification({message: 'Notification message'});
- //  }
+
 }
-
-
 }
 })
