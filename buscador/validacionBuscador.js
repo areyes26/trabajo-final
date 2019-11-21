@@ -14,7 +14,7 @@ UIkit.notification({
     message: 'Debes introducir al menos 3 caracteres!',
     status: 'primary',
     pos: 'top-right',
-    timeout: 5000
+    timeout: 3000
 })
 //
 // document.querySelector(".barra-buscadora").onsubmit = function() {}
