@@ -33,7 +33,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
 
        }
 
-         else{listado.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinal.results[i].poster_path + '">'  +  '</a>'+ '</li>'
+         else{listado.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinal.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinal.results[i].poster_path + '">'  +  '</a>'+ '</li>'
        }
      }
   })
@@ -58,7 +58,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
            listadoAire.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="../images/not-found.png">'  +  '</a>'+ '</li>'
 
          }
-           else{listadoAire.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
+           else{listadoAire.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalAire.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinalAire.results[i].poster_path + '">' + '</a>'+ '</li>'
          }
        }
     })
@@ -83,7 +83,7 @@ fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a7
              listadoMejor.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="../images/not-found.png">'  +  '</a>'+ '</li>'
 
            }
-            else{ listadoMejor.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/original/' + resultadoFinalMejor.results[i].poster_path + '">' + '</a>'+ '</li>'
+            else{ listadoMejor.innerHTML += '<li>'+ '<a href="detalles-serie/detalles-serie.html?id='+ resultadoFinalMejor.results[i].id +'">' + '<img src="https://image.tmdb.org/t/p/w500/' + resultadoFinalMejor.results[i].poster_path + '">' + '</a>'+ '</li>'
           }
          }
       })

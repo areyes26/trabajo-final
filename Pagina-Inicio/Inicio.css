@@ -1,5 +1,5 @@
-main{
-  width: 100%;
+/* main{
+  /* width: 100%; */
 }
 
 
@@ -11,8 +11,8 @@ div.Populares{
   text-decoration: underline;
   font-variant: small-caps;
   text-align: center;
-  width: 90% ;
-  margin-left: 5%;
+  /* width: 90% ;
+  margin-left: 5%; */
 }
 
 
@@ -23,8 +23,8 @@ div.alAire {
   text-decoration: underline;
   font-variant: small-caps;
   text-align: center;
-  width: 90%;
-  margin-left: 5%;
+  /* width: 90%;
+  margin-left: 5%; */
 }
 
 div.mejor {
@@ -34,8 +34,8 @@ div.mejor {
   text-decoration: underline;
   font-variant: small-caps;
   text-align: center;
-  width: 90%;
-  margin-left: 5%;
+  /* width: 90%;
+  margin-left: 5%; */
 }
 
 div.verMasTarde {
@@ -45,6 +45,6 @@ div.verMasTarde {
   text-decoration: underline;
   font-variant: small-caps;
   text-align: center;
-  width: 90%;
-  margin-left: 5%;
-}
+  /* width: 90%;
+  margin-left: 5%; */
+} */

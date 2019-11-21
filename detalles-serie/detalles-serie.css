@@ -57,6 +57,7 @@ div.trailerSerie{
     margin-right: 1vw;
     max-width: 80%;
 }
+}
 .botonDeFav{
   width: 20vw;
   margin-left: 40vw;
@@ -66,4 +67,7 @@ div.trailerSerie{
 }
 div.infoSerie h3 a {
   color: white;
+}
+div.infoSerie h3, div.infoSerie h1{
+  color: darkgray;
 }
