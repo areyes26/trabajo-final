@@ -96,6 +96,7 @@ window.onload = function() {
 
   document.querySelector("#buttonFav").onclick = function() {
 
+    var botonFavorito = document.querySelector("#buttonFav")
 
     //Paso 2: Modificar la informacion
     // Si la serie ya era favorito
@@ -103,11 +104,11 @@ window.onload = function() {
       // Lo quito
       var index = seriesFavoritos.indexOf(id);
       seriesFavoritos.splice(index, 1);
-      document.querySelector(".buttonFav").innerHTML = "AGREGAR FAVORITO";
+      botonFavorito.innerHTML = "AGREGAR FAVORITO";
     } else {
       //Lo agrego
       seriesFavoritos.push(id);
-      document.querySelector(".buttonFav").innerHTML = "QUITAR DE FAVORITOS";
+      botonFavorito.innerHTML = "QUITAR DE FAVORITOS";
     }
 
 
@@ -173,7 +174,7 @@ window.onload = function() {
       var containerTrailer = document.querySelector(".trailerSerie");
       var contenedorSeries = document.querySelector(".diceTrailer")
 
-      for (var i = 0; i < 2; i++) {
+      for (var i = 0; i <resultadoFinal.results.length; i++) {
 console.log(resultadoFinal);
         if (resultadoFinal.results.length <1) {
           contenedorSeries.innerHTML = '<h1>'+'</h1>'

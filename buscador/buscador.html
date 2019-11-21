@@ -48,8 +48,9 @@
     </div>
     <div class="buscador">
       <form class="barra-buscadora" action="../buscador/buscador.html" method="get">
-        <input class="buscadorNomal"type="search" value="" name="buscar" required>
+        <input type="search" value="" name="buscar">
       </form>
+    </div>
       <!-- Buscador Avanzado-->
       <a id="avanzada" href="#modal-avan" uk-toggle>Avanzada</a>
       <div id="modal-avan" uk-modal>
@@ -62,7 +63,7 @@
               <h4>Buscar por Genero:</h4>
             </label>
             <select class="incluir" name="incluir">
-              <option value="">ninguno</option>
+              <option value="">-- Por Favor Seleccione Una Serie --</option>
               <!-- Aca va el genero que se desea Buscar -->
             </select>
             <br>
@@ -70,7 +71,7 @@
               <h4>Excluir por Genero:</h4>
             </label>
             <select class="excluir" name="excluir">
-              <option value="">ninguno</option>
+              <option value="">-- Por Favor Seleccione Una Serie --</option>
               <!-- Aca van el genero que se desean excluir-->
             </select>
             <br>

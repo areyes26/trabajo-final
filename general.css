@@ -136,6 +136,7 @@ form.barra-buscadora input {
   bottom: 20%;
   position: absolute;
   font-size: 1.7vw;
+  left: 70vw;
 }
 
 #buscadorAvanzado {
