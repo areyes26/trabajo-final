@@ -1,14 +1,14 @@
 window.addEventListener("load", function() {
 
 
-  document.querySelector(".barra-buscadora").onsubmit = function(event) {
+  document.querySelector(".barra-buscadora").addEventListener('submit',function(event) {
     var loQueEscribio = document.querySelector(".buscadorNomal").value
-    event.preventDefault()
 
 console.log(loQueEscribio.length);
 
 if (loQueEscribio.length < 3)
 {
+  event.preventDefault()
 
   UIkit.notification ({
       message : 'Inserte Al Menos 3 Caracteres',
@@ -26,5 +26,5 @@ document.querySelector(".barra-buscadora").onsubmit = function() {}
 
 
 }
-}
+})
 })
