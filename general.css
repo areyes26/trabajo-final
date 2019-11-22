@@ -154,6 +154,73 @@ form.barra-buscadora input {
   text-align: center;
 }
 
+
+@media only screen and (max-width: 450px){
+
+header{
+  display: block;
+  height: 26vw;
+}
+div.Menu{
+  display: block;
+  width: 100%;
+  height: 60%;
+}
+div.img-logo{
+  width: auto;
+  height: 60%;
+  margin-left: 44vw;
+}
+ul.botones-menu{
+  height: 40%;
+}
+div.buscador{
+  width: 30%;
+  margin-left: 35%;
+  height: 50%;
+}
+ul.botones-menu li a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 3vw;
+}
+form.barra-buscadora {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 15%;
+    top: 30%;
+    bottom: 30%;
+}
+#avanzada {
+      color: white;
+      width: 20%;
+      height: 60%;
+      top: 39%;
+      bottom: 20%;
+      position: absolute;
+      font-size: 3vw;
+      left: 84vw;
+}
+
+form.barra-buscadora input {
+    width: 100%;
+    position: absolute;
+    height: 80%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.paddingParaBarra {
+    padding-top: 30vw;
+}
+
+}
+
+
+
+
 .uk-modal-title , .uk-modal-subtitle, form.avanzado h4{
   color: white;
 }

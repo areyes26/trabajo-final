@@ -1,4 +1,4 @@
-ul.resultados{
+ul.resultados, ul.listaFav{
   margin-bottom: 0%;
   padding: 0%;
   display:flex;
@@ -6,13 +6,13 @@ ul.resultados{
   justify-content: space-around;
 }
 
-ul.resultados li{
+ul.resultados li, ul.listaFav li{
   width: 21vw;
   margin-top: 3vw;
 }
 
 
-ul.resultados li a img{
+ul.resultados li a img, ul.listaFav li img{
   width: 100%;
   border-style: solid;
   border-color: rgba(143, 28, 28,0.33);
@@ -20,13 +20,13 @@ ul.resultados li a img{
   border-radius: 4%
 }
 
-ul.resultados li:hover{
+ul.resultados li:hover, ul.listaFav li:hover{
   width: 22vw;
   transition: width 0.5s;
 
 }
 
-ul.resultados li:hover a img{
+ul.resultados li:hover a img, ul.listaFav li:hover a img{
   border-style: solid;
   border-color: rgba(143, 28, 28,0.33);
   border-width:  0.6vw;
