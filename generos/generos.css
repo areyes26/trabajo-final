@@ -1,4 +1,9 @@
 main{
   width: 100%;
-  height: 90vh
+
+}
+.listaGeneros li a{
+  color: white;
+  font-size: 30px;
+  justify-content: space-around;
 }

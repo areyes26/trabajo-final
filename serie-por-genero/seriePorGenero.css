@@ -6,11 +6,42 @@ margin-bottom: 0;
 justify-content: space-around;
 }
 
-ul.listaGeneros li{
-  width: 21%;
 
-}
-}
 h1.tituloSerie {
   margin: 0px;
+}
+ul.listaGeneros{
+  margin-bottom: 0%;
+  padding: 0%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ul.listaGeneros li{
+  width: 21vw;
+  margin-top: 3vw;
+}
+
+
+ul.listaGeneros li a img{
+  width: 100%;
+  border-style: solid;
+  border-color: rgba(143, 28, 28,0.33);
+  border-width:  0.4vw;
+  border-radius: 4%
+}
+
+ul.listaGeneros li:hover{
+  width: 22vw;
+  transition: width 0.5s;
+
+}
+
+ul.listaGeneros li:hover a img{
+  border-style: solid;
+  border-color: rgba(143, 28, 28,0.33);
+  border-width:  0.6vw;
+  border-radius: 5%
+
 }

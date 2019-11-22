@@ -10,7 +10,7 @@ window.onload = function(){
   console.log(aleatorio());
 
 
-  numRandom.innerHTML = '<a href="detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+  numRandom.innerHTML = '<a href="detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Random' + '</a>'
 
 //SERIES POPULARES
 fetch("https://api.themoviedb.org/3/tv/popular?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US&page=1")

@@ -68,7 +68,7 @@ window.addEventListener("load", function() {
   console.log(aleatorio());
 
 
-  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id=' + aleatorio() + '">' + 'Serie Aleatoria' + '</a>'
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id=' + aleatorio() + '">' + 'Random' + '</a>'
   // var btn = document.querySelector("#page");
   // btn.onclick =  function() {
   //   page++;

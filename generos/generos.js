@@ -9,7 +9,7 @@ window.onload = function(){
   console.log(aleatorio());
 
 
-  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Serie Aleatoria' + '</a>'
+  numRandom.innerHTML = '<a href="../detalles-serie/detalles-serie.html?id='+ aleatorio() +'">'+ 'Random' + '</a>'
 
   /* Header y Footer */
 
