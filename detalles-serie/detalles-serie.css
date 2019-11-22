@@ -71,3 +71,55 @@ div.infoSerie h3 a {
 div.infoSerie h3, div.infoSerie h1{
   color: darkgray;
 }
+
+#botonRecomendaciones{
+  width: 26VW;
+  margin-left: 37vw;
+}
+
+/* Media Para Celular */
+@media only screen and (max-width: 450px) {
+main{
+  width: 100%;
+}
+
+div.containerImg{
+  width: 100vw;
+  height: 77vw;
+}
+div.containerInfo{
+  width: 90%;
+  margin-left: 5%;
+}
+
+div.imagenSerie{
+  height: auto;
+  width: 50vw;
+  top: auto;
+  left: 25%;
+}
+div.imagenSerie img{
+  height: auto;
+}
+iframe{
+
+  width: 280px;
+  height: 157.5px;
+}
+#buttonFav{
+  margin-bottom: 3vw;
+}
+
+#botonRecomendaciones{
+margin-left: 11vw;
+width: 78vw;
+}
+
+#buttonFav , #buttonVer{
+  width: 78vw;
+  margin-left: 6vw;
+
+}
+
+
+}
